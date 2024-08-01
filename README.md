@@ -5,7 +5,16 @@ The deployed component can be found here for understanding how it works:
 ```
 https://dxp.squiz.cloud/organization/sales-team-us-3708/component-service/all-components/presales/related-content
 ```
+## Deploy
 
+To deploy a component to the Squiz DXP you will require :
+- a DXP console login 
+- dxp-next installed
+
+### install dxp cli tools
+```
+npm i -g @squiz/dxp-cli-next
+```
 Develop
 ```
 npm i 
