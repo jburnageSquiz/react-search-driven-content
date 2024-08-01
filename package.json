@@ -1,0 +1,36 @@
+{
+  "name": "banner-event-links",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:build-client": "npm run build:client -- --watch",
+    "dev:build-server": "npm run build:server -- --watch",
+    "dev:component": "dxp-next cmp dev .",
+    "build": "npm-run-all build:*",
+    "build:client": "vite build --outDir dist/client --config vite-client.config.js",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.jsx --config vite-server.config.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@remirror/pm": "^2.0.6",
+    "@remirror/react": "^2.0.28",
+    "@remirror/react-editors": "^1.0.34",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remirror": "^2.0.32"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.63.2",
+    "vite": "^4.3.9",
+    "vite-plugin-raw": "^1.0.3",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}

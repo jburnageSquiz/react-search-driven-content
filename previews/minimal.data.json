@@ -1,0 +1,11 @@
+    {
+      "componentTitle": "Related Content",
+      "componentContent":"<p>Discover more based on your interest on this page</p>",
+      "componentSearchFacet": "Category",
+      "componentSearchUrl": "https://dxp-us-search.funnelback.squiz.cloud/s/search.json",
+      "componentSearchCollection": "?f.Tabs%7C4aa4be02-d98d-424f-9a82-333ce5801c33~ds-local-government-events=Events&collection=4aa4be02-d98d-424f-9a82-333ce5801c33~sp-local-government-meta&sort=date",
+      "componentSearchProfile": "_default_preview",
+      "componentSearchQuery": "!null",
+      "componentHeadingDisplay": true
+    }
+

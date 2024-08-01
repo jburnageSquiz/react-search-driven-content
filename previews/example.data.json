@@ -1,0 +1,27 @@
+    {
+      "componentTitle": "Related events",
+      "componentImageURL": {
+        "name": "My Image",
+        "alt": "This is the image alt text",
+        "caption": "This is a caption",
+        "imageVariations": {
+            "original": {
+                "url": "https://sales-team-us.matrix.squiz.cloud/__data/assets/image/0028/137683/abstract-city-invert.png",
+                "width": 100,
+                "height": 100,
+                "byteSize": 1000,
+                "mimeType": "image/jpeg",
+                "aspectRatio": "1:1",
+                "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+            }
+        }
+    },
+      "componentContent":"<p>Check out the upcoming events happening at your council</p>",
+      "componentSearchFacet": "Category",
+      "componentSearchUrl": "https://dxp-us-search.funnelback.squiz.cloud/s/search.json",
+      "componentSearchCollection": "?f.Tabs%7C4aa4be02-d98d-424f-9a82-333ce5801c33~ds-local-government-events=Events&collection=4aa4be02-d98d-424f-9a82-333ce5801c33~sp-local-government-meta&sort=date",
+      "componentSearchProfile": "default_preview",
+      "componentSearchQuery": "!null",
+      "componentHeadingDisplay": true
+    }
+

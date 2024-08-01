@@ -1,0 +1,132 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "related-content",
+  "namespace": "presales",
+  "displayName": "Related Content",
+  "description": "Search driven listing of related content to help segment user interest from home or landing pages",
+  "version": "0.0.3",
+  "mainFunction": "main",
+
+  "icon": {
+    "id": "apps",
+    "color": {
+      "type": "hex",
+      "value": "#22a6b3"
+    }
+  },
+
+  "functions": [
+    {
+      "name": "main",
+      "entry": "dist/server/entry-server.cjs",
+      "input": {
+        "type": "object",
+        "properties": {
+          "componentTitle": {
+            "type": "string",
+            "title": "Title"
+          },
+          "componentContent": {
+            "title": "Text summary",
+            "type": "FormattedText"
+          },
+          "componentImageURL": {
+            "type": "SquizImage",
+            "title": "Image Path"
+          },
+          "componentSearchFacet": {
+            "type": "string",
+            "title": "Search Facet to display to allow users to select other categories "
+          },
+          "componentSearchUrl": {
+            "type": "string",
+            "title": "Search Domain URL"
+          },
+          "componentSearchCollection": {
+            "type": "string",
+            "title": "Search Collection"
+          },
+          "componentSearchProfile": {
+            "type": "string",
+            "title": "Search Profile"
+          },
+          "componentSearchQuery": {
+            "type": "string",
+            "title": "Search Query"
+          },
+          "componentHeadingDisplay": {
+            "title": "Display headings",
+            "description": "A control to show or hide headings above results and categories",
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": ["componentTitle"]
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "client/style.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "https://unpkg.com/react@18/umd/react.production.min.js"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "client/entry-client.iife.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/minimal.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview-minimal.html"
+          }
+        }
+      }
+    },
+    "with-image": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "dist"
+  }
+}

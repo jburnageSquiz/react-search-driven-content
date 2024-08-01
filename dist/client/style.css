@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600&family=Roboto:wght@300;400;500&display=swap");
+
+/* added to match main demo site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Define breakpoints for responsiveness */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+}
+p {
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 17px;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.component-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .component-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.bg-section {
+  background: #f5f6fa;
+}
+.banner-events {
+  background-repeat: no-repeat;
+  background-position: top right;
+  /* Container for the grid */
+  /* Grid items */
+}
+.banner-events--frame {
+  min-height: 400px;
+}
+.banner-events--wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.banner-events--title {
+  font-size: 3em;
+  text-align: left;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+.banner-events--text {
+  margin: 0 0 16px 0;
+}
+.banner-events--item-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.banner-events .item {
+  flex: 1;
+  /* Responsive layout */
+}
+@media (max-width: 768px) {
+  .banner-events .item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media (max-width: 992px) {
+  .banner-events .item {
+    flex-basis: calc(100% - 20px);
+  }
+}
+.banner-events .item-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.banner-events .event-tags {
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+.banner-events .event-tags li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.banner-events .event-tags li button {
+  display: block;
+  background: #fff;
+  padding: 8px 28px;
+  margin: 0 7px 7px 0;
+  font-weight: bold;
+  border: 1px solid #C6C6C6;
+  text-decoration: none;
+  color: #30336b;
+  transition: all 0.3s ease;
+}
+.banner-events .event-tags li button:hover {
+  background: #e42313;
+  border-color: #e42313;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.banner-events .event-tags li button.active {
+  background: #e42313;
+  border-color: #e42313;
+  color: #fff;
+}
+.banner-events .event-listing {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  gap: 10px; /* Adds a 10px gap between items */
+}
+.banner-events .event-listing--item {
+  flex: 0 1 calc(33.33% - 7px); /* Calculate the width of each item (50% - half of the gap) */
+  box-sizing: border-box; /* Include padding in the item's width */
+}
+.banner-events .event-listing--item a {
+  text-decoration: none;
+}
+.banner-events .event-listing--item a:hover .image-container:before {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.banner-events .event-listing--item a:hover .image-container:after {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.banner-events .event-listing--item a:hover h3 {
+  color: #e42313;
+}
+.banner-events .event-listing--item h3 {
+  color: #30336b;
+  position: relative;
+  display: inline-block;
+  padding-right: 8px;
+  margin-bottom: 16px;
+}
+.banner-events .event-listing--item p {
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+.banner-events .event-listing .image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 9 divided by 16, or 9 / 16 * 100% */
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.banner-events .event-listing .image-container:before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 2px #e42313;
+  border-right: solid 2px #e42313;
+  transform: rotate(45deg);
+  opacity: 0;
+  z-index: 2;
+}
+.banner-events .event-listing .image-container:after {
+  content: "";
+  background: grey;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.banner-events .event-listing .image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the container without distortion */
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+.loader::before, .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+.loader::after {
+  inset: 8px;
+  transform: rotate3d(90, 90, 0, 180deg);
+  border-color: #FF3D00;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  75%, 100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+}
+.event-listing {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.event-listing__image {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
